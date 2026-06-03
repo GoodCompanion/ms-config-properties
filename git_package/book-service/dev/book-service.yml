@@ -1,0 +1,22 @@
+# Настройки для book-service
+spring:
+  data:
+    mongodb:
+      # Подключение к вашему MongoDB контейнеру
+      uri: mongodb://bestuser:bestuser@mongodb:27017/bookdb?authSource=admin
+      # Или более подробная конфигурация:
+      host: mongodb  # имя сервиса в docker-compose
+      port: 27017
+      database: bookdb
+      username: bestuser
+      password: bestuser
+      authentication-database: admin
+
+# Настройки для подключения к Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: ${HOSTNAME:localhost}

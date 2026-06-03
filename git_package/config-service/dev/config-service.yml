@@ -1,6 +1,1 @@
-server:
-  port: 8888
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+message: "hello dev"

@@ -2,10 +2,8 @@
 spring:
   data:
     mongodb:
-      # Подключение к вашему MongoDB контейнеру
-      uri: mongodb://bestuser:bestuser@mongodb:27017/bookdb?authSource=admin
-      # Или более подробная конфигурация:
-      host: mongodb  # имя сервиса в docker-compose
+      uri: mongodb://bestuser:bestuser@localhost:27017/bookdb?authSource=admin
+      host: localhost
       port: 27017
       database: bookdb
       username: bestuser
@@ -16,7 +14,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka/}
+      defaultZone: http://localhost:8761/eureka/  # ← ИЗМЕНИТЕ: eureka-server → localhost
   instance:
     prefer-ip-address: true
-    hostname: ${HOSTNAME:localhost}
+    hostname: localhost

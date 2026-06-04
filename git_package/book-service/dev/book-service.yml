@@ -1,14 +1,3 @@
-spring:
-  data:
-    mongodb:
-      uri: mongodb://bestuser:bestuser@localhost:27017/bookdb?authSource=admin
-      host: localhost
-      port: 27017
-      database: bookdb
-      username: bestuser
-      password: bestuser
-      authentication-database: admin
-
 eureka:
   client:
     service-url:

@@ -1,4 +1,3 @@
-# Настройки для book-service
 spring:
   data:
     mongodb:
@@ -10,11 +9,10 @@ spring:
       password: bestuser
       authentication-database: admin
 
-# Настройки для подключения к Eureka
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/  # ← ИЗМЕНИТЕ: eureka-server → localhost
+      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
     hostname: localhost
